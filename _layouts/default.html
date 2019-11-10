@@ -1,0 +1,77 @@
+{% if page.title %}
+{% assign page_title = page.title | append: " &ndash; " | append: site.title %}
+{% else %}
+{% assign page_title = site.title %}
+{% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', '{{ site.google_analytics }}');
+	</script>
+	<meta charset="utf-8">
+	<title>{{ page_title }}</title>
+	<meta name="author" content="Andrij Stachurski">
+	<meta name="keywords" content="Andrij Stachurski, Web, CSS, JavaScript, HTML5, Front-end, Web Developer, Sys Admin, Systems Administrator, Australia, Canberra">
+	<meta name="description" content="Andrij Stachurski is a technical consultant and front-end web developer from Canberra, Australia">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@DrDrij">
+	<meta name="twitter:title" content="Andrij Stachurski">
+	<meta name="twitter:description" content="Andrij Stachurski is a technical consultant and front-end web developer from Canberra, Australia">
+	<meta name="twitter:creator" content="@DrDrij">
+	<meta name="twitter:image" content="/assets/img/me.jpg">
+	<meta property="og:title" content="Andrij Stachurski" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://drdrij.com/" />
+	<meta property="og:image" content="http://drdrij.com/assets/img/me.jpg" />
+	<meta property="og:description" content="Andrij Stachurski is a technical consultant and front-end web developer from Canberra, Australia" /> 
+	<meta property="og:site_name" content="Andrij Stachurski" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<link rel="stylesheet" href="/assets/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
+</head>
+    <body>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-57206412-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	
+	<nav id="top-nav" class="headroom">
+    
+		<div class="container">
+
+	    		<ul>
+	    			<li{% if page.url == '/' %} class="active"{% endif %}><a href="/"><span class="icon icon-map-pin"></span><span class="title"> Home</span></a></li>
+	    			<li{% if page.url == '/portfolio/' %} class="active"{% endif %}><a href="/portfolio"><span class="icon icon-mobile"></span><span class="title"> Portfolio</span></a></li>
+	    			<li{% if page.url == '/cv/' %} class="active"{% endif %}><a href="/cv"><span class="icon icon-layers"></span><span class="title"> CV</span></a></li>
+	    		</ul>
+    		
+    		</div>
+    	
+    	</nav>	
+	    
+	<div id="main" role="main">  
+			
+		<div class="container">
+
+{{ content }}
+
+        </div>
+		
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+
+</body>
+</html>
