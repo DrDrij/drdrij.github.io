@@ -120,6 +120,13 @@ a:hover { border-bottom:1px solid #115069;color:#115069;}
 .portfolio .logo {margin:0;position: absolute;top:0;left:0;width:126px;height:63px;overflow: hidden;border: 1px solid #ddd;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.055);-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.055);box-shadow: 0 1px 3px rgba(0,0,0,0.055);}
 .portfolio .logo img {width:100%;}
 
+.toc {
+  margin:2rem 0 2rem 0;
+  //font-size: 0.9rem;
+  padding-left: 40px;
+  border-left: 1px solid #ddd;
+}
+
 @media only screen and (max-width: 830px) {
 	.container {width:600px;}		
 }
