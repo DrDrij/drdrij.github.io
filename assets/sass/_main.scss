@@ -82,6 +82,12 @@ a:hover { border-bottom:1px solid #115069;color:#115069;}
 
 .container {width:750px;margin:0px auto;}
 
+@keyframes bounce {
+  0%, 50%, 100% {transform: translateY(0);}
+  25% {transform: translateY(-8px);}
+  75% {transform: translateY(-4px);}
+}
+
 .more {margin:100px 0 1em 0;border-top:1px solid #ddd;padding: 10px 0 0 0;}
 .more .icon {font-size:1.5em;margin:0 5px 0 0;position: relative;top:5px;}
 
@@ -89,20 +95,22 @@ a:hover { border-bottom:1px solid #115069;color:#115069;}
 .deets {}
 .desc {padding-left:30px;border-left:1px solid #ddd;}
 
-#top-nav {background-color: rgba(68, 68, 68, 0.9);position: fixed;z-index: 10;right: 0;left: 0;top: 0;width:100%;}
+#top-nav {background-color: rgba(239, 239, 239, 0.9);border-bottom: 1px solid #d4d4d4;position: fixed;z-index: 10;right: 0;left: 0;top: 0;width:100%;}
 #top-nav .container {overflow: visible;}
 #top-nav ul {list-style: none;margin:0;padding:0;}
 #top-nav li {float:left;width:33.3%;margin:0;text-align:center;position: relative;}
-#top-nav a {border:0;color:#f5f5f5;display: block;padding:6px 0 10px 0;}
-#top-nav a:hover {background:#303030;}
-#top-nav li.active a {background:#303030;cursor: default;}
+#top-nav a {border:0;color:#444444;display: inline-block;padding:6px 2rem 10px 2rem;text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);border-bottom:2px solid transparent;}
+#top-nav a:hover {color:#000;}
+#top-nav li.active a {cursor: default;font-weight: 600;border-bottom: 2px solid #444;}
+#top-nav li a:hover {color:inherit;border-bottom: 2px solid #444;border-bottom: 2px solid #ccc;}
 #top-nav li:first-child.active a {background:none;cursor: default;}
 #top-nav a .icon {margin: 0 5px 0 0;position: relative;top: 3px;font-size:1.3em;}
+#top-nav li.active a .icon {font-weight: 600;}
 
 #main {padding:100px 0 100px 0;}
 
 #person {text-align:center;margin:0 0 2em 0;}
-#portrait img {width:200px;height:200px;border-radius: 5px;overflow: hidden;box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);border: 1px solid #ccc;}
+#portrait img {width:200px;height:200px;border-radius: 5px;overflow: hidden; box-shadow: 0 2px 6px 0 rgba(0,0,0,0.3); border: 1px solid #ccc;animation: bounce 4s infinite;}
 
 #social {list-style: none;padding:0;text-align: center;margin:60px 0 0 0;font-size:0.8em;}
 #social li {display:inline-block;font-size:2.5em;margin:0 30px;}
